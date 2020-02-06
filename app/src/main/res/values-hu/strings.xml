@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToDoApp</string>
+    <string name="important">Fontos</string>
+    <string name="normal">Normál</string>
+    <string name="very_important">Nagyon fontos</string>
+    <string name="done">Kész</string>
+    <string name="task">Tennivaló</string>
+    <string name="cancel">Mégsem</string>
+    <string name="ok">Mentés</string>
+    <string name="action_settings">Beállítások</string>
+    <string name="edit_task">Tennivaló szerkesztése</string>
+    <string name="new_task">Új tennivaló</string>
+    <string name="delete">Törlés</string>
+    <string name="edit">Szerkesztés</string>
+</resources>
