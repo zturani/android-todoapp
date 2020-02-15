@@ -3,8 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="hu.holographic.todoapp.MainActivity">
     <item
+        android:id="@+id/mi_add"
+        android:orderInCategory="50"
+        android:title="@string/new_item"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mi_removeall"
+        android:orderInCategory="75"
+        android:title="@string/remove_all_items"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
-        android:name="@string/action_settings"
+        android:title="@string/action_settings"
         app:showAsAction="never" />
 </menu>

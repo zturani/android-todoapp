@@ -1,0 +1,16 @@
+<resources>
+    <!-- Order Preference -->
+    <string-array name="order_entries">
+        <item>@string/creation_date</item>
+        <item>@string/by_name</item>
+        <item>@string/by_deadline</item>
+        <item>@string/by_importance</item>
+    </string-array>
+
+    <string-array name="order_values">
+        <item>by_creation</item>
+        <item>by_name</item>
+        <item>by_deadline</item>
+        <item>by_importance</item>
+    </string-array>
+</resources>

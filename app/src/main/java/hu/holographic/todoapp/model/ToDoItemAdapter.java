@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ import hu.holographic.todoapp.R;
 public class ToDoItemAdapter extends ArrayAdapter<ToDoItem> {
 
     private int resource;
-    Context context;
+    private Context context;
 
     public ToDoItemAdapter(@NonNull Context context, int resource,  @NonNull List<ToDoItem> objects) {
         super(context, resource, objects);

@@ -1,18 +1,15 @@
 package hu.holographic.todoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import hu.holographic.todoapp.model.Status;
 import hu.holographic.todoapp.model.ToDoItem;
@@ -30,7 +27,7 @@ public class ToDoItemActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actitity_todoitem);
+        setContentView(R.layout.activity_todoitem);
 
         etName = findViewById(R.id.etName);
         rgStatus = findViewById(R.id.rgStatus);
@@ -43,15 +40,21 @@ public class ToDoItemActivity extends AppCompatActivity {
         if (tdi != null) { //ha edit
             etName.setText(tdi.getName());
             int statusValue = tdi.getStatus().getValue();
-            if (statusValue == 0) statusValue = 1; //készből normál
+            if (statusValue == 0) statusValue = 1; //készből legyen normál
             radioButton = (RadioButton) rgStatus.getChildAt(statusValue - 1);
             radioButton.toggle();
 
-            dpDate.updateDate(tdi.getYear(), tdi.getMonth(), tdi.getDay());
+            dpDate.updateDate(tdi.getYear(), tdi.getMonth()-1, tdi.getDay());
 
             setTitle(R.string.edit_task);
         } else {
             setTitle(R.string.new_task);
+        }
+
+        //vissza gomb
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
         }
     }
 
@@ -72,7 +75,7 @@ public class ToDoItemActivity extends AppCompatActivity {
         tdi.setStatus(Status.getStatusByValue(statusId));
 
         tdi.setYear(dpDate.getYear());
-        tdi.setMonth(dpDate.getMonth());
+        tdi.setMonth(dpDate.getMonth()+1);
         tdi.setDay(dpDate.getDayOfMonth());
 
         intent.putExtra("tdi", tdi);

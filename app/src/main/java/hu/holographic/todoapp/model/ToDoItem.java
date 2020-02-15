@@ -1,14 +1,6 @@
 package hu.holographic.todoapp.model;
 
-import android.content.res.Resources;
-import android.graphics.Color;
-
-import androidx.annotation.NonNull;
-
 import java.io.Serializable;
-import java.util.Date;
-
-import hu.holographic.todoapp.R;
 
 public class ToDoItem implements Serializable {
     private int id;
@@ -22,7 +14,6 @@ public class ToDoItem implements Serializable {
     public ToDoItem() {
         this.id = -1;
         this.timestamp = System.currentTimeMillis();
-
     }
 
     public ToDoItem(String name, int year, int month, int day, Status status) {

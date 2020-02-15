@@ -7,9 +7,36 @@
     <string name="done">Done</string>
     <string name="task">Task</string>
     <string name="cancel">Cancel</string>
-    <string name="ok">Save</string>
+    <string name="save">Save</string>
     <string name="edit_task">Edit task</string>
     <string name="new_task">New task</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="back">Back</string>
+    <string name="days_to_go">%1$d days to go</string>
+    <string name="remove_all_items">Remove all items</string>
+    <string name="new_item">New Item</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <string name="task_details">Task details</string>
+    <string name="tasks">Tasks</string>
+    <string name="background_service">Daily task check</string>
+    <string name="swipe_actions">Swipe actions</string>
+    <string name="todays_tasks">Today\'s task:</string>
+    <string name="ok">OK</string>
+    <string name="days_ago">%1$d days overdue</string>
+    <string name="default_item_order">Default item order</string>
+    <string name="creation_date">by Creation date, descending</string>
+    <string name="by_name">by Name, ascending</string>
+    <string name="by_deadline">by Deadline, descending</string>
+    <string name="by_importance">by Importance, descending</string>
+    <string name="todoapp">ToDoApp</string>
+    <string name="details">Details</string>
+    <string name="today">Today is the deadline</string>
+    <string name="less_than_one_day">Less than one day to go</string>
 </resources>

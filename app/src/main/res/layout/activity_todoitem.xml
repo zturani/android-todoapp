@@ -123,7 +123,7 @@
             android:onClick="save"
             android:paddingLeft="30sp"
             android:paddingRight="30sp"
-            android:text="@string/ok"
+            android:text="@string/save"
             android:textSize="16sp"
             />
     </LinearLayout>

@@ -9,7 +9,7 @@ import androidx.annotation.Nullable;
 class ToDoItemDBHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "todo.db";
-    private static final int DB_VERSION = 2;
+    private static final int DB_VERSION = 4;
 
     public ToDoItemDBHelper(@Nullable Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -17,12 +17,14 @@ class ToDoItemDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE todoitem (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, year INTEGER, month INTEGER, day INTEGER, status TEXT, timestamp INTEGER)");
+        db.execSQL("CREATE TABLE todoitem (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, year INTEGER, month INTEGER, day INTEGER, status INTEGER, timestamp INTEGER)");
 
         long timestamp = System.currentTimeMillis();
-        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Android vizsgafeladat', 2020, 2, 15, 'VERY_IMPORTANT', "+timestamp+")");
-        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Felhívni a szerelőt', 2020, 2, 13, 'IMPORTANT', "+timestamp+")");
-        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Középcsapágy vásárlás', 2020, 2, 11, 'DONE', "+timestamp+")");
+        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Android vizsgafeladat', 2020, 2, 15, '3', "+timestamp+")");
+        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Szerelő', 2020, 2, 13, '2', "+timestamp+")");
+        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Sört venni', 2020, 2, 17, '2', "+timestamp+")");
+        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Fontos!', 2020, 3, 6, '3', "+timestamp+")");
+        db.execSQL("INSERT INTO todoitem (name, year, month, day, status, timestamp) VALUES ('Nem annyira fontos', 2020, 5, 4, '1', "+timestamp+")");
     }
 
     @Override
